@@ -5,8 +5,11 @@
  */
 package Backend;
 
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.Scanner;
 
 /**
  *
@@ -40,6 +43,15 @@ public class UserManager {
         return out;
     }
     
-    
+    public static String [] getUsers() throws FileNotFoundException{
+        String [] output = new String [5];
+        
+        Scanner sc = new Scanner(new File("names.txt"));
+        
+        for(int i = 0; i < 5; i++){
+            output[i] = sc.next();
+        }
+       return output;
+    }
     
 }
