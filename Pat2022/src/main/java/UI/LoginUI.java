@@ -5,6 +5,10 @@
  */
 package UI;
 
+import java.io.FileNotFoundException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  *
  * @author Narita
@@ -41,7 +45,6 @@ public class LoginUI extends javax.swing.JFrame {
         addButt = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setUndecorated(true);
 
         jPanel1.setBackground(new java.awt.Color(255, 153, 153));
 
@@ -129,11 +132,17 @@ public class LoginUI extends javax.swing.JFrame {
 
     private void okButtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_okButtActionPerformed
         // TODO add your handling code here:
+        
         String userName = usernameInput.getText();
         String password = passwordInput.getText();
         
         dispose();
-        //username and password check
+        try {
+            new TabsUI().setVisible(true);
+            //username and password check
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(LoginUI.class.getName()).log(Level.SEVERE, null, ex);
+        }
         
     }//GEN-LAST:event_okButtActionPerformed
 
