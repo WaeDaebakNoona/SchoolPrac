@@ -5,6 +5,10 @@
  */
 package UI;
 
+import java.io.FileNotFoundException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  *
  * @author Narita
@@ -86,7 +90,7 @@ public class EntryUI extends javax.swing.JFrame {
     private void backButtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backButtActionPerformed
         // TODO add your handling code here:
         dispose();
-        new TabsUI().setVisible(true);
+       
     }//GEN-LAST:event_backButtActionPerformed
 
     /**
