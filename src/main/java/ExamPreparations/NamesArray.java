@@ -15,8 +15,9 @@ public class NamesArray {
     private int size;
 
     public NamesArray() {
+        size = 0;
         names = new String[100];
-        String filepath = "data\\Names2";
+        String filepath = "data\\Names2.txt";
         Scanner sc = new Scanner(filepath);
         
         while(sc.hasNext()){
@@ -48,13 +49,40 @@ public class NamesArray {
         return -1;
     }
     public void insert(String name){
-        
+        int pos = 0;
+        while(name.compareTo(names[pos])>0){
+            pos++;
+        }
+        shiftMore(pos);
+        names[pos] = name;
         
     }
     public void delete(String name){
-        
+        int pos = searchFirst(name);
+        while(pos != -1){
+            shiftLess(pos);
+            pos = searchFirst(name);
+        }
     }
-    public void shift(){
+    public void shiftMore(int p){
+        for(int i = size; i>= p; i--){
+            names[i] = names[i+1];
+        }
+        size++;
+    }
+    public void shiftLess(int p){
+        for(int i = p; i < size-1; i++){
+            names[i] = names[i+1];
+        }
+        size--;
+    }
+    public int searchFirst(String el){
+        for(int i =0; i<size;i++){
+            if(names[i].equals(el)){
+                return i;
+            }
+        }
+        return -1;
     }
     @Override
     public String toString() {

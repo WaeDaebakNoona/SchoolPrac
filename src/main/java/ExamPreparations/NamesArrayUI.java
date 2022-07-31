@@ -12,7 +12,8 @@ public class NamesArrayUI {
     public static void main(String[] args) {
         NamesArray nm = new NamesArray();
         nm.sort();
-        nm.toString();
+        nm.delete("Callie");
+        nm.insert("Carrie");
     }
     
 }
