@@ -20,6 +20,7 @@ public class EntryUI extends javax.swing.JFrame {
      */
     public EntryUI() {
         initComponents();
+        setLocationRelativeTo(null);
     }
 
     /**

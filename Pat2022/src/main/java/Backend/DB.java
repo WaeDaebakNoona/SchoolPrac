@@ -19,7 +19,10 @@ import java.sql.SQLException;
 public class DB {
 
 	private static final String driver = "com.mysql.cj.jdbc.Driver";
-	private static final String url = "jdbc:mysql://localhost:3306/leadersdb";
+	private static final String url = "jdbc:mysql://102.130.115.69:3306/naritaaDB";
+        //102.130.115.69 
+        //localhost
+        //naritaaDB
 	private static final String username = "root";
 	private static final String password = "Reddam2021";
 
@@ -34,7 +37,9 @@ public class DB {
 		connection = DriverManager.getConnection(url, username, password);
 		System.out.println("DB: Database connection established");
 	}
-
+        //update
+        //delete
+        //insert
 	public void update(String update) throws SQLException {
 		statement = connection.prepareStatement(update);
 		statement.executeUpdate();

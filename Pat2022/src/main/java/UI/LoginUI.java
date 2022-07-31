@@ -5,9 +5,12 @@
  */
 package UI;
 
+import Backend.UserManager;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -70,6 +73,11 @@ public class LoginUI extends javax.swing.JFrame {
         addButt.setBackground(new java.awt.Color(255, 255, 255));
         addButt.setForeground(new java.awt.Color(0, 0, 0));
         addButt.setText("ADD");
+        addButt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addButtActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -136,7 +144,16 @@ public class LoginUI extends javax.swing.JFrame {
         String userName = usernameInput.getText();
         String password = passwordInput.getText();
         
-        dispose();
+        if(UserManager.checkUser(userName, password)){
+            dispose();
+            //new TabsUI().setVisible(true);
+            
+        }
+        else{
+            JOptionPane.showMessageDialog(this,"Invalid username or password");
+        }
+        
+        
         try {
             new TabsUI().setVisible(true);
             //username and password check
@@ -145,6 +162,19 @@ public class LoginUI extends javax.swing.JFrame {
         }
         
     }//GEN-LAST:event_okButtActionPerformed
+
+    private void addButtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addButtActionPerformed
+        // TODO add your handling code here:
+        String username = usernameInput.getText();
+        String password = passwordInput.getText();
+        try {
+            UserManager.addUser(username, password);
+        } catch (IOException ex) {
+            Logger.getLogger(LoginUI.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        JOptionPane.showMessageDialog(this, "Successfully added!");
+    }//GEN-LAST:event_addButtActionPerformed
 
     /**
      * @param args the command line arguments
