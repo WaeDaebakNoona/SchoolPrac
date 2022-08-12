@@ -7,6 +7,9 @@ package Backend;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Scanner;
@@ -17,7 +20,7 @@ import java.util.Scanner;
  */
 public class UserManager {
     
-    private Users[] user = new Users[100];
+    private User[] user = new User[100];
     private int size = 0;
     
     public UserManager() throws SQLException {
@@ -53,5 +56,36 @@ public class UserManager {
         }
        return output;
     }
+    public static boolean checkUser(String username, String password){
+        String file = "data//users.txt";
+            try {
+            Scanner sc = new Scanner(new File(file));
+            while(sc.hasNextLine()){
+                String line = sc.nextLine();
+                
+                Scanner lineSc = new Scanner(line).useDelimiter("#");
+                String currentUsername = lineSc.next();
+                String currentPassword = lineSc.next();
+                if(currentUsername.equals(username) && currentPassword.equals(password)){
+                    return true;
+                }
+                lineSc.close();
+            }
+            sc.close();
+        } catch (FileNotFoundException ex) {
+            System.out.println("File not found");
+        }
+            return false;
+    
+    }
+    public static void addUser(String username, String password) throws IOException{
+        String filepath = "data//users.txt";
+    
+            PrintWriter pw = new PrintWriter(new FileWriter(filepath, true));
+            pw.println(username + "#" + password);
+            pw.close();
+        
+        }
+    
     
 }

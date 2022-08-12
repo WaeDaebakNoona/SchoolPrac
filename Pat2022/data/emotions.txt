@@ -1,0 +1,4 @@
+Sad
+Angry
+Happy
+Stressed
