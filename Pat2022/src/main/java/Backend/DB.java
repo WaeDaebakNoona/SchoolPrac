@@ -23,7 +23,7 @@ public class DB {
         //102.130.115.69 
         //localhost
         //naritaaDB
-	private static final String username = "root";
+	private static final String username = "naritaa";
 	private static final String password = "Reddam2021";
 
 	private PreparedStatement statement;
