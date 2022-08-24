@@ -45,7 +45,7 @@ public class DB {
 		statement.executeUpdate();
 		statement.close();
 	}
-
+        //select
 	public ResultSet query(String stmt) throws SQLException {
 		statement = connection.prepareStatement(stmt);
 		result = statement.executeQuery();
