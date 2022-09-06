@@ -31,7 +31,7 @@ public class TabsUI extends javax.swing.JFrame {
         int waterInt = (int)waterSpin.getValue();
         int hoursExerc = (int)exerciseSpin.getValue();
             
-        HealthManager.insert();
+        //HealthManager.insert();
         
          //example       
         DefaultComboBoxModel<String> model = new DefaultComboBoxModel<>(UserManager.getUsers());
