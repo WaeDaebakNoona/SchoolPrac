@@ -19,9 +19,9 @@ public class HealthManager {
         
     }
     
-    public void insert(int hs, int wi, int he){
+    public void insert(int sleep, int water, int exercise){
         DB db = new DB();
-        String query = "INSERT INTO HealthResult(sleep,water,exercise) VALUES(" + hs + "," + wi + "," + he + ")";
+        String query = "INSERT INTO HealthResult(sleep,water,exercise) VALUES(" + sleep + "," + water + "," + exercise + ")";
         db.update(query);
         
     }
