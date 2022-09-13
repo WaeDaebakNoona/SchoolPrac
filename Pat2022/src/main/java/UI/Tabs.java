@@ -7,6 +7,7 @@ package UI;
 
 import Backend.UserManager;
 import java.io.FileNotFoundException;
+import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -37,8 +38,21 @@ public class Tabs extends javax.swing.JFrame {
         }
         boxx.setModel(model2);
         setLocationRelativeTo(null);
+        
+        ArrayList<String> name = getListNames();
+        DefaultComboBoxModel comModel = new DefaultComboBoxModel();
+        comModel.addAll(name);
+        emoCombo.setModel(comModel);
     }
-
+    public ArrayList<String>getListNames(){
+        ArrayList<String> list = new ArrayList<>();
+        list.add("Peter");
+        list.add("John");
+        list.add("Paul");
+        
+       return list;
+    }
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -71,8 +85,8 @@ public class Tabs extends javax.swing.JFrame {
         discButt = new javax.swing.JButton();
         saveButton = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
-        jLabel4 = new javax.swing.JLabel();
+        emoCombo = new javax.swing.JComboBox<>();
+        emoLabel = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         namebox = new javax.swing.JComboBox<>();
         jScrollPane6 = new javax.swing.JScrollPane();
@@ -201,9 +215,9 @@ public class Tabs extends javax.swing.JFrame {
 
         jLabel5.setText("How are you today?");
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        emoCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
-        jLabel4.setText("jLabel4");
+        emoLabel.setText("jLabel4");
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
@@ -235,12 +249,12 @@ public class Tabs extends javax.swing.JFrame {
                                         .addComponent(jLabel5)
                                         .addGap(89, 89, 89))
                                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
-                                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(emoCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                         .addGap(104, 104, 104))))
                             .addGroup(jPanel5Layout.createSequentialGroup()
                                 .addComponent(jLabel3)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jLabel4)
+                                .addComponent(emoLabel)
                                 .addGap(124, 124, 124))))))
         );
         jPanel5Layout.setVerticalGroup(
@@ -254,12 +268,12 @@ public class Tabs extends javax.swing.JFrame {
                     .addComponent(jLabel5))
                 .addGap(25, 25, 25)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(emoCombo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel2))
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(jPanel5Layout.createSequentialGroup()
                         .addGap(56, 56, 56)
-                        .addComponent(jLabel4)
+                        .addComponent(emoLabel)
                         .addGap(31, 31, 31))
                     .addGroup(jPanel5Layout.createSequentialGroup()
                         .addGap(18, 18, 18)
@@ -442,14 +456,14 @@ public class Tabs extends javax.swing.JFrame {
     private javax.swing.JList<String> boxx;
     private javax.swing.JButton discButt;
     private javax.swing.JButton discardButt;
+    private javax.swing.JComboBox<String> emoCombo;
+    private javax.swing.JLabel emoLabel;
     private javax.swing.JTextField headingInput;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
-    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
