@@ -13,6 +13,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.DefaultListModel;
+import javax.swing.Icon;
 
 /**
  *
@@ -28,16 +29,16 @@ public class Tabs extends javax.swing.JFrame {
         initComponents();
         
         //example
-        DefaultComboBoxModel<String> model = new DefaultComboBoxModel<>(UserManager.getUsers());
-        namebox.setModel(model);
-        
-        DefaultListModel<String> model2 = new DefaultListModel<>();
-        String [] arr = UserManager.getUsers();
-        for(String s: arr){
-            model2.addElement(s);
-        }
-        boxx.setModel(model2);
-        setLocationRelativeTo(null);
+//        DefaultComboBoxModel<String> model = new DefaultComboBoxModel<>(UserManager.getUsers());
+//        namebox.setModel(model);
+//        
+//        DefaultListModel<String> model2 = new DefaultListModel<>();
+//        String [] arr = UserManager.getUsers();
+//        for(String s: arr){
+//            model2.addElement(s);
+//        }
+//        boxx.setModel(model2);
+//        setLocationRelativeTo(null);
         
         ArrayList<String> name = getListNames();
         DefaultComboBoxModel comModel = new DefaultComboBoxModel();
@@ -46,12 +47,14 @@ public class Tabs extends javax.swing.JFrame {
     }
     public ArrayList<String>getListNames(){
         ArrayList<String> list = new ArrayList<>();
-        list.add("Peter");
-        list.add("John");
-        list.add("Paul");
+        list.add("Happy");
+        list.add("Sad");
+        list.add("Angry");
+        list.add("Stressed");
         
        return list;
     }
+    
     
     /**
      * This method is called from within the constructor to initialize the form.
@@ -216,6 +219,11 @@ public class Tabs extends javax.swing.JFrame {
         jLabel5.setText("How are you today?");
 
         emoCombo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        emoCombo.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                emoComboItemStateChanged(evt);
+            }
+        });
 
         emoLabel.setText("jLabel4");
 
@@ -411,6 +419,13 @@ public class Tabs extends javax.swing.JFrame {
     private void saveButtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveButtActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_saveButtActionPerformed
+
+    private void emoComboItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_emoComboItemStateChanged
+        // TODO add your handling code here:
+        String name = (String)emoCombo.getSelectedItem();
+        emoLabel.setIcon();
+        emoLabel.setText(name);
+    }//GEN-LAST:event_emoComboItemStateChanged
 
     /**
      * @param args the command line arguments
