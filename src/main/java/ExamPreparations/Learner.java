@@ -20,12 +20,12 @@ public class Learner {
         this.activityOne = activityOne;
         this.activityTwo = activityTwo;
         
-        learnerCode = "CODE: " + learnerName.substring(0, 2).toUpperCase() + Math.random() * 99 + 10;
+        learnerCode = "CODE: " + learnerName.substring(0, 2).toUpperCase() + Math.random() * 100;
     }
     
-    public double calcStudentTotalCost(){
-        //double cost = ;
-        return 0;
+    public double calcStudentTotalCost(Activity activityOne, Activity activityTwo){
+        double totalCost = activityOne.getCost() + activityTwo.getCost();
+        return totalCost;
     }
     
 }
