@@ -27,5 +27,21 @@ public class Learner {
         double totalCost = activityOne.getCost() + activityTwo.getCost();
         return totalCost;
     }
+
+    public String getLearnerCode() {
+        return learnerCode;
+    }
+
+    public void setLearnerCode(String learnerCode) {
+        this.learnerCode = learnerCode;
+    }
+
+    @Override
+    public String toString() {
+        String output = "";
+       
+        String out = "Name: " + "(" + getLearnerCode() + ")" + "\nActivity 1: " + activityOne. + "\nActivity 2: " + activityTwo "\nCost: R" + calcStudentTotalCost(activityOne, activityTwo);//activities and leaner?
+        return out; 
+    }
     
 }

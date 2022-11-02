@@ -24,6 +24,7 @@ public class Activity {
         this.actDate = actDate;
     }
 
+
     public String getDescription() {
         return description;
     }
