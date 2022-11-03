@@ -4,18 +4,29 @@
  */
 package ExamPreparations;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
 /**
  *
  * @author Naritaa
  */
 public class LearnerManager {
-    private Learner learnerArr;
+    private Learner [] learnerArr = new Learner [50];
     private int learnerCount;
 
-    public LearnerManager(Learner learnerArr, int learnerCount) {
-        this.learnerArr = learnerArr;
-        this.learnerCount = learnerCount;
+    public LearnerManager() throws FileNotFoundException {
+        String filepath = "";
+        Scanner sc = new Scanner(new File(filepath));
+        while(sc.hasNext()){
+            String line = sc.nextLine();
+            Scanner linesc = new Scanner(line).useDelimiter("#");
+            
+        }
     }
+
+   
     
     
 }
