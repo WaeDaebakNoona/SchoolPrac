@@ -11,6 +11,7 @@ package ExamPreparations;
 public class StudentUI {
     public static void main(String[] args) {
         Student st = new Student();
+        st.markSort();
         System.out.println(st.yearReport());
     }
 }

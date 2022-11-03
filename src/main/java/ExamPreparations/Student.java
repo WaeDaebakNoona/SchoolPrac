@@ -74,7 +74,7 @@ public class Student {
         //improved bubblesort
         
         for (int i = subjects.length-1; i >=0; i--) {
-            for (int j = i-1; j < subjects.length; j++) {
+            for (int j =0; j < i; j++) {
                 
                 if(yearMarks[j] > yearMarks[j+1]){
                     int temp = yearMarks[j];
