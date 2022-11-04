@@ -27,3 +27,24 @@ public class BubbleSorta {
         System.out.println(Arrays.toString(arr));
     }
 }
+//for (int i = subjects.length-1; i > 0 ; i--) {
+//            for (int j = 0; j < i; j++) {
+//                if(yearMarks[j]< yearMarks[j+1]){
+//                    int temp = yearMarks[j+1];
+//                    yearMarks[j+1]= yearMarks[j];
+//                    yearMarks[j] = temp;
+//                }
+//            }
+//            
+//        }
+//selsection
+//        for (int i = 0; i < subjects.length; i++) {
+//            for (int j = i+1; j < subjects.length; j++) {
+//                if(yearMarks[j]< yearMarks[i]){
+//                    int temp = yearMarks[i];
+//                    yearMarks[i]= yearMarks[j];
+//                    yearMarks[j] = temp;
+//                }
+//            }
+//            
+//        }

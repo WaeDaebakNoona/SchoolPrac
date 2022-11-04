@@ -13,5 +13,7 @@ public class StudentUI {
         Student st = new Student();
         st.markSort();
         System.out.println(st.yearReport());
+        System.out.println(st.getSubject(st.markSearch(77)));
+        
     }
 }

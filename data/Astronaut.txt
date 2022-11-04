@@ -1,0 +1,33 @@
+12,Nov 14-24:1969,TRUE,Alan Bean
+14,Jan 31-Feb 9:1971,TRUE,Alan Shepard
+15,Jul 26-Aug 7:1971,TRUE,Alfred Worden
+11,Jul 16-24:1969,TRUE,Buzz Aldrin
+12,Nov 14-24:1969,TRUE,Pete Conrad
+16,Apr 16-27:1972,TRUE,Charles Duke
+9,Mar 3-13:1969,FALSE,David Scott
+15,Jul 26-Aug 7:1971,TRUE,David Scott
+7,Oct 11-22:1968,FALSE,Donn Eisele
+14,Jan 31-Feb 9:1971,TRUE,Edgar Mitchell
+10,May 18-26:1969,FALSE,Eugene Cernan
+17,Dec 7-19:1972,TRUE,Eugene Cernan
+8,Dec 21-27:1968,FALSE,Frank Borman
+13,Apr 11-17:1970,TRUE,Fred Haise
+17,Dec 7-19:1972,TRUE,Harrison Schmitt
+13,Apr 11-17:1970,TRUE,Jack Swigert
+15,Jul 26-Aug 7:1971,TRUE,James Irwin
+8,Dec 21-27:1968,FALSE,James Lovell
+13,Apr 11-17:1970,TRUE,James Lovell
+9,Mar 3-13:1969,FALSE,James McDivitt
+10,May 18-26:1969,FALSE,John Young
+16,Apr 16-27:1972,TRUE,John Young
+11,Jul 16-24:1969,TRUE,Michael Collins
+11,Jul 16-24:1969,TRUE,Neil Armstrong
+12,Nov 14-24:1969,TRUE,Richard Gordon
+17,Dec 7-19:1972,TRUE,Ronald Evans
+9,Mar 3-13:1969,FALSE,Russell Schweickart
+14,Jan 31-Feb 9:1971,TRUE,Stuart Roosa
+16,Apr 16-27:1972,TRUE,T. Kenneth Mattingly
+10,May 18-26:1969,FALSE,Thomas Stafford
+7,Oct 11-22:1968,FALSE,Wally Schirra
+7,Oct 11-22:1968,FALSE,Walt Cunningham
+8,Dec 21-27:1968,FALSE,William Anders

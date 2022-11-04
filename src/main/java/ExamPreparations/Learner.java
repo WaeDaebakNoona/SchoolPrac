@@ -40,8 +40,8 @@ public class Learner {
     public String toString() {
         String output = "";
        
-        String out = "Name: " + "(" + getLearnerCode() + ")" + "\nActivity 1: " + activityOne. + "\nActivity 2: " + activityTwo "\nCost: R" + calcStudentTotalCost(activityOne, activityTwo);//activities and leaner?
-        return out; 
+        //String out = "Name: " + "(" + getLearnerCode() + ")" + "\nActivity 1: " + activityOne. + "\nActivity 2: " + activityTwo "\nCost: R" + calcStudentTotalCost(activityOne, activityTwo);//activities and leaner?
+        return output; 
     }
     
 }

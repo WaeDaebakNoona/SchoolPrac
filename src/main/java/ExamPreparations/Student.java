@@ -70,32 +70,43 @@ public class Student {
         return sub;
     }
     
-    public void markSort(){
+    public void markSort() {
         //improved bubblesort
-        
-        for (int i = subjects.length-1; i >=0; i--) {
-            for (int j =0; j < i; j++) {
-                
-                if(yearMarks[j] > yearMarks[j+1]){
-                    int temp = yearMarks[j];
-                    yearMarks[j] = yearMarks[j+1];
-                    yearMarks[j+1] = temp;
-                }   
-            }    
-        }
-      
-        
-    }
-    public int markSearch(int mark){
-        int start = 0;
-        int end = 15;
-        while(start<=end){
-            int mid = (start+end)/2;
-            if(yearMarks[mark] == mid){
-                return mid;
+
+        for (int i = subjects.length-1; i > 0 ; i--) {
+            for (int j = 0; j < i; j++) {
+                if(yearMarks[j]> yearMarks[j+1]){
+                    int temp = yearMarks[j+1];
+                    yearMarks[j+1]= yearMarks[j];
+                    yearMarks[j] = temp;
+                }
             }
-//            else if(yearMarks[]){
+            
+        }
+//        for (int i = 0; i < subjects.length; i++) {
+//            for (int j = i+1; j < subjects.length; j++) {
+//                if(yearMarks[j]< yearMarks[i]){
+//                    int temp = yearMarks[i];
+//                    yearMarks[i]= yearMarks[j];
+//                    yearMarks[j] = temp;
+//                }
 //            }
+//            
+//        }
+    }
+    public int markSearch(int mark) {
+        int start = 0;
+        int end = 14;
+        
+        while (start <= end) {
+            int mid = (start + end) / 2;
+            if (yearMarks[mid] == mark) {
+                return mid;
+            } else if (yearMarks[mid] < mark) {
+                start = mid + 1;
+            } else {
+                end = mid - 1;
+            }
         }
         return -1;
     }
