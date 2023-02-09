@@ -17,7 +17,7 @@ public class Officer extends CrewMember{
     
     private int rank;
     private LocalDate datePromoted;
-    public final int numPromotedOfficers = 0;
+    public static int numPromotedOfficers = 0;
     
     public Officer(String inFN, int inCID, String inDT, int inRK, LocalDate inDP) {
         super(inFN, inCID, inDT);
@@ -67,7 +67,7 @@ public class Officer extends CrewMember{
         if(rank <=4){
             rank +=1;
             datePromoted = LocalDate.now();
-            numPromotedOfficers += 1; //but its final
+            numPromotedOfficers += 1; 
         }
         
     }
