@@ -32,12 +32,16 @@ public class CrewMemberManager {
                 String name = lineSc.next();
                 int crewID = lineSc.nextInt();
                 String department = lineSc.next();
-                int rank = lineSc.nextInt();
-                String dateStr = lineSc.next();
-                DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd-MM-yyyy");
-                LocalDate date = LocalDate.parse(dateStr, dtf);
+                if(lineSc.hasNext()){
+                    int rank = lineSc.nextInt();
+                    String dateStr = lineSc.next();
+                    DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd-MM-yyyy");
+                    LocalDate date = LocalDate.parse(dateStr, dtf);
+                }
+                
                         
-                        
+                //how to know if crew or officer
+                //if statements?
                 cArr[size] = new CrewMember(name,crewID,department);
                 //cArr[size] = new Officer(name,crewID,department,rank,date);
                 size++;
