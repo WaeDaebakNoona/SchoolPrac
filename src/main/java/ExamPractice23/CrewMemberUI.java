@@ -4,16 +4,19 @@
  */
 package ExamPractice23;
 
+import java.io.FileNotFoundException;
+
 /**
  *
  * @author Naritaa
  */
 public class CrewMemberUI {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws FileNotFoundException {
         
         CrewMemberManager cm = new CrewMemberManager();
         cm.toString();
-         
+        cm.processTestResults();
+        
     }
    
     
