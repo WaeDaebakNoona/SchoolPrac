@@ -1,0 +1,17 @@
+[
+{ 	
+	name : "Avery",
+	surname : "Grambs",
+	age: 17
+},
+{
+	name : "James",
+	surname : "Hawthrone",
+	age: 18
+},
+{
+	name : "Percy",
+	surname: "Jackson",
+	age : 12
+}
+]
