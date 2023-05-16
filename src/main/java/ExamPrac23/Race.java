@@ -42,9 +42,17 @@ public class Race {
         return raceName + ", Numlaps:" + numLaps + ", Drivers: " + "" ;//reference drivers tostring...help
     }
     
+    public int getDriverFee(String name){
+        //6.3 idk what to do...but also my brain just hurts
+        for (int i = 0; i < drivers.length; i++) {
+            if(drivers[i].equals(name)){
+                return drivers[i].getFee();
+            }
+        }
+        return 0;
+    }
     
     
     
     
-    
-}
+}//end of class

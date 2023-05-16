@@ -26,15 +26,33 @@ public class RaceManager {
     //4.3
     public RaceManager() {
         try {
+            //4.4
             Scanner sc = new Scanner(new File("drivers.txt"));
             while(sc.hasNext()){
                 Scanner lineSc = new Scanner(sc.nextLine()).useDelimiter(",");
-                String id = lineSc.next();
+                int id = lineSc.nextInt();
                 String name = lineSc.next();
                 int race  = lineSc.nextInt();
                 int fee = lineSc.nextInt();
+                drivers[driverCount] = new Driver(id,name,race,fee);    
+                driverCount++;
                 
                 
+            Scanner scRace = new Scanner(new File("races.txt"));
+            while(scRace.hasNext()){
+                Scanner linescRace = new Scanner(scRace.nextLine()).useDelimiter(",");
+                String raceName = linescRace.next();
+                int numLaps = linescRace.nextInt();
+                
+                races[raceCount] = new Race(raceName,numLaps);
+                
+                
+                while(linescRace.hasNext()){
+                    
+                    int idnum = linescRace.nextInt();
+                    races [raceCount].addDriver(drivers[idnum]);//help 6.1
+                }
+            }
         }
             
             
@@ -43,6 +61,27 @@ public class RaceManager {
             Logger.getLogger(RaceManager.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
+
+    @Override
+    public String toString() {
+        String output = "";
+        for (int i = 0; i < raceCount; i++) {
+            output += races[i];
+        }
+        return "Race day Races: \n" + output + "\n" ;
+    }
+    public int totalDriverFee(String name){
+       //for loop ...what am i doing
+       int totalFee = 0;
+        for (int i = 0; i < drivers.length; i++) {
+            totalFee += drivers[i].getFee();
+            
+        }
+       return 0;
+    }
     
+    public double calcRaceDayFees(){
+        return 0;
+    }
     
-}
+}//end of class
