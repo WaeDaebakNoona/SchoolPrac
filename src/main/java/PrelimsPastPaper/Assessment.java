@@ -59,7 +59,7 @@ public class Assessment {
 
     @Override
     public String toString() {
-        return "Assessment" + '}';
+        return getAssessmentName() + " : " + getMark() + "/" + getTotal();
     }
     
     //c
