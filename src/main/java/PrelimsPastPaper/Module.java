@@ -40,7 +40,7 @@ public class Module {
         //3.5
     }
     
-    //3,6
+    //3.6
     public LocalDate getExamDate(){
         LocalDate output = null;
         
@@ -57,8 +57,31 @@ public class Module {
     }
     
     public double getModuleMark(){
-        
+       //3.7 come back
         return 0;
     }
+    
+    public boolean hasPassed(){
+        //3.8
+        boolean result = false;
+        if(getModuleMark()> PASS_MARK){
+            result = true;
+        }
+        else{
+            result = false;
+        }
+        return result;
+    }
+
+    @Override
+    public String toString() {
+        String output = "Module: " + getModuleName() + " | ";
+        for (int i = 0; i < assessments.length; i++) {
+            output += "ASSESSMENTS: " + assessments[i].getAssessmentName() + " : " + assessments[i].getMark() + "/" + assessments[i].getTotal() + " | ";
+            
+        }
+        return output;
+    }
+    
     
 }
